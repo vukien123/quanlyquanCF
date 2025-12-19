@@ -98,7 +98,9 @@
             // 
             // dataGridViewchitiethd
             // 
+            dataGridViewchitiethd.BackgroundColor = Color.WhiteSmoke;
             dataGridViewchitiethd.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewchitiethd.GridColor = Color.LightGray;
             dataGridViewchitiethd.Location = new Point(-2, 180);
             dataGridViewchitiethd.Name = "dataGridViewchitiethd";
             dataGridViewchitiethd.RowHeadersWidth = 51;

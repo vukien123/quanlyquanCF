@@ -19,7 +19,7 @@ namespace Quản_lý_Quán_Cafe.UI
             InitializeComponent();
             LoadBan();
             LoadDanhMuc();
-            LoadDoUong();
+            LoadDoUong();    
             comboDM.SelectedIndexChanged += DanhmucDouong;
             dataGridDoUong.CellClick += dataGridDoUong_CellClick;
 
@@ -138,7 +138,11 @@ namespace Quản_lý_Quán_Cafe.UI
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dataGridDoUong.AutoGenerateColumns = true;  // đảm bảo bật
                 dataGridDoUong.DataSource = dt;
+                dataGridDoUong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridDoUong.RowHeadersVisible = false;
+                
             }
         }
         // Lọc đồ uống theo danh mục
@@ -235,6 +239,7 @@ namespace Quản_lý_Quán_Cafe.UI
             LoadChiTietHoaDon();
             LoadBan();
         }
+        // Load chi tiết hóa đơn lên DataGridView
         void LoadChiTietHoaDon()
         {
             using (SqlConnection conn = new SqlConnection(DBconection.connectionString))
@@ -252,9 +257,12 @@ namespace Quản_lý_Quán_Cafe.UI
                 da.Fill(dt);
 
                 dataGridViewchitiethoadon.DataSource = dt;
+                dataGridViewchitiethoadon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewchitiethoadon.RowHeadersVisible = false;
+                
             }
         }
-
+        // Thanh toán
         private void butthanhtoan_Click(object sender, EventArgs e)
         {
             if (maHoaDonHienTai == 0)
@@ -307,5 +315,6 @@ namespace Quản_lý_Quán_Cafe.UI
             f.ShowDialog();
 
         }
+
     }
 }

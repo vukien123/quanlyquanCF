@@ -29,118 +29,184 @@ namespace Quản_lý_Quán_Cafe.UI
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(danhmuc));
+            panelmain = new Panel();
+            panelgrid = new Panel();
             dataGridView1 = new DataGridView();
-            butTHEM = new Button();
-            butSUA = new Button();
-            butXOA = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            txtmaDM = new TextBox();
+            paneltop = new Panel();
             txttenDM = new TextBox();
+            txtmaDM = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            butXOA = new Button();
+            imageList1 = new ImageList(components);
+            butSUA = new Button();
+            butTHEM = new Button();
+            panelmain.SuspendLayout();
+            panelgrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            paneltop.SuspendLayout();
             SuspendLayout();
+            // 
+            // panelmain
+            // 
+            panelmain.Controls.Add(panelgrid);
+            panelmain.Controls.Add(paneltop);
+            panelmain.Dock = DockStyle.Fill;
+            panelmain.Location = new Point(0, 0);
+            panelmain.Name = "panelmain";
+            panelmain.Size = new Size(538, 392);
+            panelmain.TabIndex = 9;
+            // 
+            // panelgrid
+            // 
+            panelgrid.Controls.Add(dataGridView1);
+            panelgrid.Dock = DockStyle.Fill;
+            panelgrid.Location = new Point(0, 167);
+            panelgrid.Name = "panelgrid";
+            panelgrid.Size = new Size(538, 225);
+            panelgrid.TabIndex = 18;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = Color.WhiteSmoke;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(0, 104);
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.GridColor = Color.LightGray;
+            dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(304, 288);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.Size = new Size(538, 225);
+            dataGridView1.TabIndex = 10;
             // 
-            // butTHEM
+            // paneltop
             // 
-            butTHEM.Location = new Point(288, 3);
-            butTHEM.Name = "butTHEM";
-            butTHEM.Size = new Size(94, 29);
-            butTHEM.TabIndex = 1;
-            butTHEM.Text = "THÊM\r\n";
-            butTHEM.UseVisualStyleBackColor = true;
-            butTHEM.Click += butTHEM_Click;
+            paneltop.Controls.Add(txttenDM);
+            paneltop.Controls.Add(txtmaDM);
+            paneltop.Controls.Add(label3);
+            paneltop.Controls.Add(label2);
+            paneltop.Controls.Add(butXOA);
+            paneltop.Controls.Add(butSUA);
+            paneltop.Controls.Add(butTHEM);
+            paneltop.Dock = DockStyle.Top;
+            paneltop.Location = new Point(0, 0);
+            paneltop.Name = "paneltop";
+            paneltop.Size = new Size(538, 167);
+            paneltop.TabIndex = 17;
             // 
-            // butSUA
+            // txttenDM
             // 
-            butSUA.Location = new Point(288, 38);
-            butSUA.Name = "butSUA";
-            butSUA.Size = new Size(94, 29);
-            butSUA.TabIndex = 2;
-            butSUA.Text = "SỬA";
-            butSUA.UseVisualStyleBackColor = true;
-            butSUA.Click += butSUA_Click;
+            txttenDM.Location = new Point(121, 75);
+            txttenDM.Name = "txttenDM";
+            txttenDM.Size = new Size(268, 27);
+            txttenDM.TabIndex = 23;
             // 
-            // butXOA
+            // txtmaDM
             // 
-            butXOA.Location = new Point(288, 73);
-            butXOA.Name = "butXOA";
-            butXOA.Size = new Size(94, 29);
-            butXOA.TabIndex = 3;
-            butXOA.Text = "XÓA";
-            butXOA.UseVisualStyleBackColor = true;
-            butXOA.Click += butXOA_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(99, 20);
-            label2.TabIndex = 5;
-            label2.Text = "Mã danh mục";
+            txtmaDM.Location = new Point(121, 21);
+            txtmaDM.Name = "txtmaDM";
+            txtmaDM.Size = new Size(268, 27);
+            txtmaDM.TabIndex = 22;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 65);
+            label3.Location = new Point(14, 78);
             label3.Name = "label3";
             label3.Size = new Size(101, 20);
-            label3.TabIndex = 6;
+            label3.TabIndex = 21;
             label3.Text = "Tên danh mục";
             // 
-            // txtmaDM
+            // label2
             // 
-            txtmaDM.Location = new Point(119, 12);
-            txtmaDM.Name = "txtmaDM";
-            txtmaDM.Size = new Size(125, 27);
-            txtmaDM.TabIndex = 7;
+            label2.AutoSize = true;
+            label2.Location = new Point(14, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 20);
+            label2.TabIndex = 20;
+            label2.Text = "Mã danh mục";
             // 
-            // txttenDM
+            // butXOA
             // 
-            txttenDM.Location = new Point(119, 62);
-            txttenDM.Name = "txttenDM";
-            txttenDM.Size = new Size(125, 27);
-            txttenDM.TabIndex = 8;
+            butXOA.ImageAlign = ContentAlignment.MiddleLeft;
+            butXOA.ImageIndex = 1;
+            butXOA.ImageList = imageList1;
+            butXOA.Location = new Point(419, 116);
+            butXOA.Name = "butXOA";
+            butXOA.Padding = new Padding(10, 0, 0, 0);
+            butXOA.Size = new Size(116, 29);
+            butXOA.TabIndex = 19;
+            butXOA.Text = "XÓA";
+            butXOA.UseVisualStyleBackColor = true;
+            butXOA.Click += butXOA_Click;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "icons8-pencil-32.png");
+            imageList1.Images.SetKeyName(1, "icons8-close-32.png");
+            imageList1.Images.SetKeyName(2, "icons8-add-32.png");
+            // 
+            // butSUA
+            // 
+            butSUA.ImageAlign = ContentAlignment.MiddleLeft;
+            butSUA.ImageIndex = 0;
+            butSUA.ImageList = imageList1;
+            butSUA.Location = new Point(419, 69);
+            butSUA.Name = "butSUA";
+            butSUA.Padding = new Padding(10, 0, 0, 0);
+            butSUA.Size = new Size(116, 29);
+            butSUA.TabIndex = 18;
+            butSUA.Text = "SỬA";
+            butSUA.UseVisualStyleBackColor = true;
+            butSUA.Click += butSUA_Click;
+            // 
+            // butTHEM
+            // 
+            butTHEM.ImageAlign = ContentAlignment.MiddleLeft;
+            butTHEM.ImageIndex = 2;
+            butTHEM.ImageList = imageList1;
+            butTHEM.Location = new Point(419, 19);
+            butTHEM.Name = "butTHEM";
+            butTHEM.Padding = new Padding(10, 0, 0, 0);
+            butTHEM.Size = new Size(116, 29);
+            butTHEM.TabIndex = 17;
+            butTHEM.Text = "THÊM\r\n";
+            butTHEM.UseVisualStyleBackColor = true;
+            butTHEM.Click += butTHEM_Click;
             // 
             // danhmuc
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(txttenDM);
-            Controls.Add(txtmaDM);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(butXOA);
-            Controls.Add(butSUA);
-            Controls.Add(butTHEM);
-            Controls.Add(dataGridView1);
+            Controls.Add(panelmain);
             Name = "danhmuc";
-            Size = new Size(380, 392);
+            Size = new Size(538, 392);
             Load += danhmuc_Load;
+            panelmain.ResumeLayout(false);
+            panelgrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            paneltop.ResumeLayout(false);
+            paneltop.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private Panel panelmain;
+        private Panel panelgrid;
         private DataGridView dataGridView1;
-        private Button butTHEM;
-        private Button butSUA;
-        private Button butXOA;
-        private Label label2;
-        private Label label3;
-        private TextBox txtmaDM;
+        private Panel paneltop;
         private TextBox txttenDM;
+        private TextBox txtmaDM;
+        private Label label3;
+        private Label label2;
+        private Button butXOA;
+        private Button butSUA;
+        private Button butTHEM;
+        private ImageList imageList1;
     }
 }

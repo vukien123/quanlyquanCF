@@ -35,6 +35,8 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // butdnhap
@@ -100,11 +102,23 @@
             label3.TabIndex = 6;
             label3.Text = "ĐĂNG NHẬP";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Gemini_Generated_Image_vgx5elvgx5elvgx5;
+            pictureBox1.Location = new Point(456, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(270, 304);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(528, 300);
+            BackColor = Color.Chocolate;
+            ClientSize = new Size(718, 300);
+            Controls.Add(pictureBox1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -114,6 +128,7 @@
             Controls.Add(butdnhap);
             Name = "Login";
             Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,5 +142,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private PictureBox pictureBox1;
     }
 }

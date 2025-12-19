@@ -22,7 +22,7 @@ namespace Quản_lý_Quán_Cafe.UI
             LoadThongTinHoaDon();
             LoadTongTienTamTinh();
         }
-
+        // Hàm load thông tin hóa đơn
         void LoadThongTinHoaDon()
         {
             using (SqlConnection conn = new SqlConnection(DBconection.connectionString))
@@ -68,6 +68,7 @@ namespace Quản_lý_Quán_Cafe.UI
                 // chỉnh đẹp bảng
                 dataGridViewchitiethd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridViewchitiethd.ReadOnly = true;
+                dataGridViewchitiethd.RowHeadersVisible = false;
             }
         }
         void LoadTongTienTamTinh()

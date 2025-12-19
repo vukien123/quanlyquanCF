@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HệthốngADMIN));
             panelphải = new Panel();
             panel2 = new Panel();
             butdangxuat = new Button();
@@ -35,6 +37,7 @@
             butDoanhthu = new Button();
             butdouong = new Button();
             Danhmuc = new Button();
+            imageList1 = new ImageList(components);
             panel3 = new Panel();
             label1 = new Label();
             panel2.SuspendLayout();
@@ -48,6 +51,7 @@
             panelphải.Name = "panelphải";
             panelphải.Size = new Size(647, 395);
             panelphải.TabIndex = 0;
+            panelphải.Paint += panelphải_Paint;
             // 
             // panel2
             // 
@@ -64,53 +68,91 @@
             // 
             // butdangxuat
             // 
-            butdangxuat.Location = new Point(-1, 190);
+            butdangxuat.BackColor = Color.FromArgb(192, 64, 0);
+            butdangxuat.ForeColor = Color.White;
+            butdangxuat.ImageAlign = ContentAlignment.MiddleLeft;
+            butdangxuat.ImageIndex = 4;
+            butdangxuat.ImageList = imageList1;
+            butdangxuat.Location = new Point(-1, 346);
             butdangxuat.Name = "butdangxuat";
+            butdangxuat.Padding = new Padding(10, 0, 0, 0);
             butdangxuat.Size = new Size(162, 52);
             butdangxuat.TabIndex = 6;
             butdangxuat.Text = "Đăng xuất";
-            butdangxuat.UseVisualStyleBackColor = true;
+            butdangxuat.UseVisualStyleBackColor = false;
             butdangxuat.Click += butdangxuat_Click;
             // 
             // butqltk
             // 
+            butqltk.BackColor = Color.White;
+            butqltk.ImageAlign = ContentAlignment.MiddleLeft;
+            butqltk.ImageIndex = 2;
+            butqltk.ImageList = imageList1;
             butqltk.Location = new Point(-1, 143);
             butqltk.Name = "butqltk";
+            butqltk.Padding = new Padding(10, 0, 0, 0);
             butqltk.Size = new Size(162, 52);
             butqltk.TabIndex = 5;
-            butqltk.Text = "Quản Lý Tài Khoản";
-            butqltk.UseVisualStyleBackColor = true;
+            butqltk.Text = "Quản lý User";
+            butqltk.UseVisualStyleBackColor = false;
             butqltk.Click += butqltk_Click;
             // 
             // butDoanhthu
             // 
+            butDoanhthu.BackColor = Color.White;
+            butDoanhthu.ImageAlign = ContentAlignment.MiddleLeft;
+            butDoanhthu.ImageIndex = 3;
+            butDoanhthu.ImageList = imageList1;
             butDoanhthu.Location = new Point(-1, 95);
             butDoanhthu.Name = "butDoanhthu";
+            butDoanhthu.Padding = new Padding(10, 0, 0, 0);
             butDoanhthu.Size = new Size(162, 52);
             butDoanhthu.TabIndex = 3;
             butDoanhthu.Text = "Doanh Thu";
-            butDoanhthu.UseVisualStyleBackColor = true;
+            butDoanhthu.UseVisualStyleBackColor = false;
             butDoanhthu.Click += butDoanhthu_Click;
             // 
             // butdouong
             // 
+            butdouong.BackColor = Color.White;
+            butdouong.ImageAlign = ContentAlignment.MiddleLeft;
+            butdouong.ImageIndex = 1;
+            butdouong.ImageList = imageList1;
             butdouong.Location = new Point(-1, 52);
             butdouong.Name = "butdouong";
+            butdouong.Padding = new Padding(10, 0, 0, 0);
             butdouong.Size = new Size(162, 47);
             butdouong.TabIndex = 2;
             butdouong.Text = "Đồ Uống";
-            butdouong.UseVisualStyleBackColor = true;
+            butdouong.UseVisualStyleBackColor = false;
             butdouong.Click += butdouong_Click;
             // 
             // Danhmuc
             // 
+            Danhmuc.BackColor = Color.White;
+            Danhmuc.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Danhmuc.ImageAlign = ContentAlignment.MiddleLeft;
+            Danhmuc.ImageIndex = 0;
+            Danhmuc.ImageList = imageList1;
             Danhmuc.Location = new Point(-1, 3);
             Danhmuc.Name = "Danhmuc";
+            Danhmuc.Padding = new Padding(10, 0, 0, 0);
             Danhmuc.Size = new Size(162, 53);
             Danhmuc.TabIndex = 0;
             Danhmuc.Text = "Danh Mục";
-            Danhmuc.UseVisualStyleBackColor = true;
+            Danhmuc.UseVisualStyleBackColor = false;
             Danhmuc.Click += Danhmuc_Click;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Turquoise;
+            imageList1.Images.SetKeyName(0, "icons8-category-50.png");
+            imageList1.Images.SetKeyName(1, "icons8-coffee-50.png");
+            imageList1.Images.SetKeyName(2, "icons8-user-50.png");
+            imageList1.Images.SetKeyName(3, "icons8-total-sales-16.png");
+            imageList1.Images.SetKeyName(4, "icons8-sign-out-50.png");
             // 
             // panel3
             // 
@@ -159,5 +201,6 @@
         private Label label1;
         private Button butqltk;
         private Button butdangxuat;
+        private ImageList imageList1;
     }
 }

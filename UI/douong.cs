@@ -49,7 +49,11 @@ namespace Quản_lý_Quán_Cafe.UI
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dataGridViewdouong.AutoGenerateColumns = true;  // đảm bảo bật
                 dataGridViewdouong.DataSource = dt;
+                dataGridViewdouong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewdouong.RowHeadersVisible = false;
+                
             }
         }
         // Lấy dữ liệu lên textbox
@@ -147,7 +151,7 @@ namespace Quản_lý_Quán_Cafe.UI
                 }
             }
         }
-
+        // Tìm kiếm đồ uống
         private void butTim_Click(object sender, EventArgs e)
         {
             if (txttimkiem.Text == "")
@@ -162,9 +166,9 @@ namespace Quản_lý_Quán_Cafe.UI
                 string keyword = txttimkiem.Text.Trim();
 
                 string sql = @"SELECT DU.MaDoUong, DU.TenDoUong, DU.DonGia, DM.TenDM
-                       FROM DoUong DU
-                       JOIN Danhmuc DM ON DU.MaDM = DM.MaDM
-                       WHERE DU.TenDoUong LIKE '%' + @keyword + '%'";
+                               FROM DoUong DU
+                               JOIN Danhmuc DM ON DU.MaDM = DM.MaDM
+                               WHERE DU.TenDoUong LIKE '%' + @keyword + '%'";
 
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 da.SelectCommand.Parameters.AddWithValue("@keyword", keyword);
@@ -175,5 +179,6 @@ namespace Quản_lý_Quán_Cafe.UI
                 dataGridViewdouong.DataSource = dt;
             }
         }
+
     }
 }

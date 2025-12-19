@@ -31,6 +31,10 @@ namespace Quản_lý_Quán_Cafe.UI
                 da.Fill(dt);
                 dataGridView1.AutoGenerateColumns = true;  // đảm bảo bật
                 dataGridView1.DataSource = dt;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.RowHeadersVisible = false;
+
+
             }
         }
         // Load dữ liệu khi mở form
@@ -128,9 +132,5 @@ namespace Quản_lý_Quán_Cafe.UI
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

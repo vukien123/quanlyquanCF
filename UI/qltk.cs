@@ -32,7 +32,11 @@ namespace Quản_lý_Quán_Cafe.UI
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dataGridViewQLTK.AutoGenerateColumns = true;  // đảm bảo bật
                 dataGridViewQLTK.DataSource = dt;
+                dataGridViewQLTK.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewQLTK.RowHeadersVisible = false;
+                
             }
         }
         //Click vào dòng để hiện nội dung vào textbox
@@ -53,7 +57,7 @@ namespace Quản_lý_Quán_Cafe.UI
         {
 
         }
-
+        // Thêm tài khoản
         private void butTHEM_Click(object sender, EventArgs e)
         {
             if (txtdnhap.Text == "" || txtmk.Text == "")
@@ -81,7 +85,7 @@ namespace Quản_lý_Quán_Cafe.UI
                 LoadUsers();
             }
         }
-
+        // Sửa tài khoản
         private void butSUA_Click(object sender, EventArgs e)
         {
             if (txtid.Text == "")
@@ -114,7 +118,7 @@ namespace Quản_lý_Quán_Cafe.UI
                 LoadUsers();
             }
         }
-
+        // Xóa tài khoản
         private void butXOA_Click(object sender, EventArgs e)
         {
             if (txtid.Text == "")
@@ -141,5 +145,6 @@ namespace Quản_lý_Quán_Cafe.UI
                 }
             }
         }
+
     }
 }

@@ -16,7 +16,7 @@ namespace Quản_lý_Quán_Cafe.UI
         {
             InitializeComponent();
         }
-
+        // Hàm tải UserControl vào panelphải
         private void LoadControl(UserControl uc)
         {
             // Xóa control cũ (và dispose để giải phóng)
@@ -30,22 +30,22 @@ namespace Quản_lý_Quán_Cafe.UI
             uc.Dock = DockStyle.Fill;
             panelphải.Controls.Add(uc);
         }
-
+        // Sự kiện click nút danh mục
         private void Danhmuc_Click(object sender, EventArgs e)
         {
             LoadControl(new danhmuc());
         }
-
+        //  Sự kiện click nút đồ uống
         private void butdouong_Click(object sender, EventArgs e)
         {
             LoadControl(new douong());
         }
-
+        //  Sự kiện click nút doanh thu
         private void butDoanhthu_Click(object sender, EventArgs e)
         {
             LoadControl(new doanhthu());
         }
-
+        // Sự kiện click nút đăng xuất
         private void butdangxuat_Click(object sender, EventArgs e)
         {
             Login loginForm = new Login();
@@ -54,11 +54,15 @@ namespace Quản_lý_Quán_Cafe.UI
 
             this.Hide();
         }
-
+        // Sự kiện click nút quản lý tài khoản
         private void butqltk_Click(object sender, EventArgs e)
         {
             LoadControl(new qltk());
         }
 
+        private void panelphải_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

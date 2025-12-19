@@ -28,8 +28,7 @@ namespace Quản_lý_Quán_Cafe.UI
                 string sql = @"SELECT MaHD, NgayLap, TongTien, TrangThaiPay, MaBan
                                FROM HoaDon
                                WHERE NgayLap BETWEEN @from AND @to
-                               AND TrangThaiPay = 1
-        ";
+                               AND TrangThaiPay = 1";
 
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 da.SelectCommand.Parameters.AddWithValue("@from", from);
@@ -38,7 +37,11 @@ namespace Quản_lý_Quán_Cafe.UI
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dataGridViewHoadon.AutoGenerateColumns = true;  // đảm bảo bật
                 dataGridViewHoadon.DataSource = dt;
+                dataGridViewHoadon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewHoadon.RowHeadersVisible = false;
+                
 
                 // tính tổng doanh thu
                 decimal total = 0;
@@ -59,10 +62,9 @@ namespace Quản_lý_Quán_Cafe.UI
             LoadHoaDonTheoNgay(DTtừngày.Value, DTđếnngày.Value);
         }
         // nút lọc theo ngày
-        private void butLọctgian_Click(object sender, EventArgs e)
+        private void butLọctgian_Click_1(object sender, EventArgs e)
         {
             LoadHoaDonTheoNgay(DTtừngày.Value.Date, DTđếnngày.Value.Date);
         }
-
     }
 }
