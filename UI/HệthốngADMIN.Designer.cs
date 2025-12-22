@@ -33,13 +33,14 @@
             panelphải = new Panel();
             panel2 = new Panel();
             butdangxuat = new Button();
+            imageList1 = new ImageList(components);
             butqltk = new Button();
             butDoanhthu = new Button();
             butdouong = new Button();
             Danhmuc = new Button();
-            imageList1 = new ImageList(components);
             panel3 = new Panel();
             label1 = new Label();
+            butqlban = new Button();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -56,6 +57,7 @@
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(butqlban);
             panel2.Controls.Add(butdangxuat);
             panel2.Controls.Add(butqltk);
             panel2.Controls.Add(butDoanhthu);
@@ -82,13 +84,25 @@
             butdangxuat.UseVisualStyleBackColor = false;
             butdangxuat.Click += butdangxuat_Click;
             // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Turquoise;
+            imageList1.Images.SetKeyName(0, "icons8-category-50.png");
+            imageList1.Images.SetKeyName(1, "icons8-coffee-50.png");
+            imageList1.Images.SetKeyName(2, "icons8-user-50.png");
+            imageList1.Images.SetKeyName(3, "icons8-total-sales-16.png");
+            imageList1.Images.SetKeyName(4, "icons8-sign-out-50.png");
+            imageList1.Images.SetKeyName(5, "icons8-table-32.png");
+            // 
             // butqltk
             // 
             butqltk.BackColor = Color.White;
             butqltk.ImageAlign = ContentAlignment.MiddleLeft;
             butqltk.ImageIndex = 2;
             butqltk.ImageList = imageList1;
-            butqltk.Location = new Point(-1, 143);
+            butqltk.Location = new Point(-1, 190);
             butqltk.Name = "butqltk";
             butqltk.Padding = new Padding(10, 0, 0, 0);
             butqltk.Size = new Size(162, 52);
@@ -143,17 +157,6 @@
             Danhmuc.UseVisualStyleBackColor = false;
             Danhmuc.Click += Danhmuc_Click;
             // 
-            // imageList1
-            // 
-            imageList1.ColorDepth = ColorDepth.Depth32Bit;
-            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
-            imageList1.TransparentColor = Color.Turquoise;
-            imageList1.Images.SetKeyName(0, "icons8-category-50.png");
-            imageList1.Images.SetKeyName(1, "icons8-coffee-50.png");
-            imageList1.Images.SetKeyName(2, "icons8-user-50.png");
-            imageList1.Images.SetKeyName(3, "icons8-total-sales-16.png");
-            imageList1.Images.SetKeyName(4, "icons8-sign-out-50.png");
-            // 
             // panel3
             // 
             panel3.BackColor = Color.White;
@@ -173,6 +176,21 @@
             label1.Size = new Size(96, 20);
             label1.TabIndex = 0;
             label1.Text = "ADMIN CAFE";
+            // 
+            // butqlban
+            // 
+            butqlban.BackColor = Color.White;
+            butqlban.ImageAlign = ContentAlignment.MiddleLeft;
+            butqlban.ImageIndex = 5;
+            butqlban.ImageList = imageList1;
+            butqlban.Location = new Point(-1, 142);
+            butqlban.Name = "butqlban";
+            butqlban.Padding = new Padding(10, 0, 0, 0);
+            butqlban.Size = new Size(162, 52);
+            butqlban.TabIndex = 7;
+            butqlban.Text = "Quản lý Bàn";
+            butqlban.UseVisualStyleBackColor = false;
+            butqlban.Click += butqlban_Click;
             // 
             // HệthốngADMIN
             // 
@@ -202,5 +220,6 @@
         private Button butqltk;
         private Button butdangxuat;
         private ImageList imageList1;
+        private Button butqlban;
     }
 }

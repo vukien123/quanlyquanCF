@@ -64,5 +64,10 @@ namespace Quản_lý_Quán_Cafe.UI
         {
 
         }
+
+        private void butqlban_Click(object sender, EventArgs e)
+        {
+            LoadControl(new qlban());
+        }
     }
 }
