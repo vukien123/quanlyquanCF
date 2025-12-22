@@ -299,6 +299,7 @@
             Controls.Add(panelBàn);
             Controls.Add(panel1);
             Name = "NhânViên";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Hệ Thống Nhân Viên";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -127,6 +127,7 @@
             Controls.Add(buthủy);
             Controls.Add(butdnhap);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
