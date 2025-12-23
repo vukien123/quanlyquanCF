@@ -64,13 +64,13 @@ namespace Quản_lý_Quán_Cafe.UI
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng");
                     this.txtdangnhap.Focus();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng.");
+                MessageBox.Show("Đăng nhập thất bại");
 
             }
         }
